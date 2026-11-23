@@ -48,7 +48,7 @@ try:
 
 except Exception as error:
 
-    print("\nERROR:", error)
+  print("\nERROR:", error)
 
 
 # Read the sample agreement.
