@@ -35,7 +35,7 @@ try:
 
    # print("Number of sections extracted:", len(sections))
 
-    print("\nCONTENT OF THE EXTRACTED DOCUMENT IS DISPLAYED AS FOLLOWS")
+    print("\nCONTENT OF THE SAMPLE VENDOR SERVICE AGREEMENT EXTRACTED IS DISPLAYED AS FOLLOWS")
     print("-" * 60)
 
     for section in sections:
