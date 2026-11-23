@@ -1,0 +1,45 @@
+
+SAMPLE VENDOR SERVICES AGREEMENT
+
+1. PARTIES
+
+This Agreement is entered into between ABC Company ("Business")
+and XYZ Technologies ("Vendor").
+
+
+2. SERVICES
+
+The Vendor shall provide cloud-based customer management
+services to the Business.
+
+3. PERSONAL INFORMATION
+
+The Business may provide the Vendor with customer names,
+email addresses, telephone numbers and account information
+for purposes of providing the contracted services.
+
+4. USE OF PERSONAL INFORMATION
+
+The Vendor may use personal information to perform the
+services described in this Agreement.
+
+5. DATA RETENTION
+
+The Vendor may retain customer information for as long
+as reasonably necessary for its business operations.
+
+6. INFORMATION SECURITY
+
+The Vendor shall maintain reasonable administrative,
+technical and physical safeguards to protect customer
+information.
+
+7. SUBCONTRACTORS
+
+The Vendor may engage subcontractors to assist with
+providing the services.
+
+8. TERMINATION
+
+Upon termination, the parties shall discuss the handling
+of customer information.

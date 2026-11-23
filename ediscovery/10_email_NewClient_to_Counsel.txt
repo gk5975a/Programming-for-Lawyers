@@ -1,0 +1,20 @@
+Subject: New Client Intake – R.J. Wright, Esq.
+
+Team,
+
+We have a new potential client, R.J. Wright, whose litigation matter involves a series of breach-of-contract claims centred around a subcontracted software deliverable. Preliminary discovery indicates that the underlying contract is dated 2019-08-12 and that the alleged breach occurred during the fiscal year 2022–2023.
+
+Key Facts:
+• Riverbank software solutions developed a custom suite of modules pursuant to the Attachment A specifications.
+• The client was allegedly negligent in oversight during the hand‑off stage, resulting in a critical data loss and a 12‑week downtime.
+• This may implicate breach of implied duty of care and damages from lost revenue.
+
+Next Steps:
+• Complete a full information request to the client by 2024‑12‑01.
+• Request all communications between the client’s project manager and our vendor, including email and meeting notes.
+• Schedule a deposition with the project lead by 2025‑01‑15.
+
+Please let me know if you foresee any issues.
+
+Best regards,
+Alex
