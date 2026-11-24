@@ -1,6 +1,8 @@
 
 Name: Gerald Kpangkpari
-________________________
+
+Date of Graduation: December 20, 2026
+__________________________________
 
 
                                         PRIVACY COMPLIANCE AI AGENT
