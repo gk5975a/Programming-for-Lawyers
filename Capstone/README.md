@@ -2,6 +2,8 @@
 Name: Gerald Kpangkpari
 _________________________________________________________________
 
+                                        PRIVACY COMPLIANCE AI AGENT
+                                    ==================================
 This is an Privacy Compliance AI agent that will analyze a vender agreement or contract and analyze it to see whether it is compliant with the California Privacy Laws.
 Here the agent will do the following activities.
 (a) it will accept a contract in txt format.
