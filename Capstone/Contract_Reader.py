@@ -27,8 +27,7 @@ def read_txt(path):
             "location": f"Text page {page_number}",
             "text": page_text.strip()
         })
-        print ([sections]["source"])
-        print ([sections]["page_number"])
+       
     return sections
 
 # Main function that reads the contract in txt format.
