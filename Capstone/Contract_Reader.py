@@ -19,14 +19,16 @@ def read_txt(path):
     for page_number, page_text in enumerate(
         content.split("\f"), start=1
     ):
-
+        # print ({page_number})
+        # print ({page_text})
         sections.append({
             "source": path.name,
             "page_number": page_number,
             "location": f"Text page {page_number}",
             "text": page_text.strip()
         })
-
+        print ([sections]["source"])
+        print ([sections]["page_number"])
     return sections
 
 # Main function that reads the contract in txt format.
