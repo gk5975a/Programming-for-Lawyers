@@ -9,5 +9,5 @@ Here the agent will do the following activities.
 (c) the agent compile all the relevant privacy statutes of California (CCPA/CPPA)
 (d) the agent will now submit the extracted clauses to Ollama.
 (e) Ollama will now provide provide an explanation of what the relevant privacy clause is, what is the protential risk of not including that piece of information and what is required for it be compliant with the privacy statute.
-(f) Agent will will then compare the extracted clauses with Privacy statures of California.
+(f) Agent will then compare the extracted clauses with Privacy statures of California.
 (e) 
