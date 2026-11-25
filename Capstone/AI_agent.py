@@ -5,18 +5,18 @@ from privacy_analyzer import analyze_privacy_clauses
 # from Contract_Reader import read_contract
 # from clause_extractor import extract_privacy_clauses
 
-from legal_rules import (
-    LEGAL_FRAMEWORK,
-    SERVICE_PROVIDER_RULES,
-    DUE_DILIGENCE_NOTE,
-    get_applicable_rules,
-    get_rule_by_id,
-    validate_rules
-)
-from compliance_engine import (
-    review_contract,
-    print_compliance_report
-)
+# from legal_rules import (
+#     LEGAL_FRAMEWORK,
+#     SERVICE_PROVIDER_RULES,
+#     DUE_DILIGENCE_NOTE,
+#     get_applicable_rules,
+#     get_rule_by_id,
+#     validate_rules
+# )
+# from compliance_engine import (
+#     review_contract,
+#     print_compliance_report
+# )
 
 
 # Location of our sample contract
@@ -98,9 +98,9 @@ try:
     print("\nStep 3: Analyzing clauses using Ollama...")
     print ("\n")      
     analyses = analyze_privacy_clauses(privacy_clauses)
-    print("\n" + "=" * 65)
-    print("AI PRIVACY ANALYSIS RESULTS")
-    print("=" * 65)
+    print("\n" + "=" * 60)
+    print("OLLAMA RETURN ANALYSIS RESULTS TO AI AGENT.")
+    print("=" * 60)
     
     for result in analyses:
     
@@ -138,11 +138,12 @@ try:
     
             print("\nPreliminary observation:")
             print(result["preliminary_observation"])
+            print("\n")
+            print("-" * 85)
     
-            print("-" * 65)
-    
-    print("\nAI ANALYSIS TEST COMPLETED")
-
+    print("\n AI AGENT HAS ANALYZED YOUR CONTRACT AND PROVIDED EXPLANATION TO YOUR CONTRACTS CLAUSES, RISK OF CLAUSES AND SEVERITY OF RISK WITH REGARDS TO CCPA/CPRA")
+    print("\n")
+    print ("COPY OF ANALYZED CONTRACT IS IN PROGRAM FOLDER UNDER THE NAME, ANALYZED_CONTRACT.TXT") 
 except Exception as error:
 
   print("\nERROR:", error)
@@ -279,96 +280,96 @@ except Exception as error:
 #     print("\nERROR DURING ANALYSIS:")
 #     print(type(error).__name__, "-", error)
 
-print("=" * 60)
-print("CALIFORNIA PRIVACY LAW DATABASE TEST")
-print("=" * 60)
+# print("=" * 60)
+# print("CALIFORNIA PRIVACY LAW DATABASE TEST")
+# print("=" * 60)
 
-try:
+# try:
 
-    # Test 1: Validate the database structure.
-    print("\n1. Validating legal rules...")
+#     # Test 1: Validate the database structure.
+#     print("\n1. Validating legal rules...")
 
-    validate_rules()
+#     validate_rules()
 
-    print("[OK] Legal rules are properly structured.")
+#     print("[OK] Legal rules are properly structured.")
 
-    # Test 2: Retrieve applicable rules.
-    print("\n2. Retrieving service provider requirements...")
+#     # Test 2: Retrieve applicable rules.
+#     print("\n2. Retrieving service provider requirements...")
 
-    rules = get_applicable_rules(
-        "service_provider_or_contractor"
-    )
+#     rules = get_applicable_rules(
+#         "service_provider_or_contractor"
+#     )
 
-    print("[OK] Rules retrieved:", len(rules))
+#     print("[OK] Rules retrieved:", len(rules))
 
-    # Test 3: Display the legal framework.
-    print("\n3. Legal framework:")
+#     # Test 3: Display the legal framework.
+#     print("\n3. Legal framework:")
 
-    print("Law:", LEGAL_FRAMEWORK["name"])
-    print("Primary statute:", LEGAL_FRAMEWORK["primary_statute"])
-    print("Primary regulation:", LEGAL_FRAMEWORK["primary_regulation"])
-    print("Regulatory version:", LEGAL_FRAMEWORK["regulation_version"])
+#     print("Law:", LEGAL_FRAMEWORK["name"])
+#     print("Primary statute:", LEGAL_FRAMEWORK["primary_statute"])
+#     print("Primary regulation:", LEGAL_FRAMEWORK["primary_regulation"])
+#     print("Regulatory version:", LEGAL_FRAMEWORK["regulation_version"])
 
-    # Test 4: Display individual requirements.
-    print("\n4. Available contractual requirements:")
+#     # Test 4: Display individual requirements.
+#     print("\n4. Available contractual requirements:")
 
-    for rule in rules:
+#     for rule in rules:
 
-        print("\nRule ID:", rule["rule_id"])
-        print("Title:", rule["title"])
-        print("Authority:", rule["authority"])
-        print("Requirement:", rule["requirement"])
+#         print("\nRule ID:", rule["rule_id"])
+#         print("Title:", rule["title"])
+#         print("Authority:", rule["authority"])
+#         print("Requirement:", rule["requirement"])
 
-    # Test 5: Retrieve one specific rule.
-    print("\n5. Testing individual rule retrieval...")
+#     # Test 5: Retrieve one specific rule.
+#     print("\n5. Testing individual rule retrieval...")
 
-    selected_rule = get_rule_by_id("CA-7051-03")
+#     selected_rule = get_rule_by_id("CA-7051-03")
 
-    if selected_rule:
+#     if selected_rule:
 
-        print("[OK] Rule found:", selected_rule["title"])
+#         print("[OK] Rule found:", selected_rule["title"])
 
-    else:
+#     else:
 
-        print("[ERROR] Rule was not found.")
+#         print("[ERROR] Rule was not found.")
 
-    # Test 6: Display due diligence note.
-    print("\n6. Additional review consideration:")
+#     # Test 6: Display due diligence note.
+#     print("\n6. Additional review consideration:")
 
-    print("Authority:", DUE_DILIGENCE_NOTE["authority"])
-    print("Explanation:", DUE_DILIGENCE_NOTE["explanation"])
+#     print("Authority:", DUE_DILIGENCE_NOTE["authority"])
+#     print("Explanation:", DUE_DILIGENCE_NOTE["explanation"])
 
-    print("\n" + "=" * 60)
-    print("LEGAL RULES DATABASE TEST COMPLETED")
-    print("=" * 60)
+#     print("\n" + "=" * 60)
+#     print("LEGAL RULES DATABASE TEST COMPLETED")
+#     print("=" * 60)
 
-except Exception as error:
+# except Exception as error:
 
-    print("\nERROR:", type(error).__name__, "-", error)
+#     print("\nERROR:", type(error).__name__, "-", error)
 
-print("\n" + "=" * 60)
-print("\n" + "=" * 60)
-print("STEP 6: COMPLIANCE ENGINE TEST")
+# print("\n" + "=" * 60)
+# print("\n" + "=" * 60)
+# print("STEP 6: COMPLIANCE ENGINE TEST")
 
-# 1. Read the sample contract.
-#contract = read_contract("Capstone/sample_vendor_agreement.txt")
+# # 1. Read the sample contract.
+# #contract = read_contract("Capstone/sample_vendor_agreement.txt")
 
-contract = read_contract(contract_path)
+# contract = read_contract(contract_path)
 
-# 2. Extract privacy-related clauses.
-clauses = extract_privacy_clauses(contract)
+# # 2. Extract privacy-related clauses.
+# clauses = extract_privacy_clauses(contract)
 
-print("\nExtracted clauses:", len(clauses))
+# print("\nExtracted clauses:", len(clauses))
 
-# 3. Identify the vendor's role.
-# This is a manually supplied assumption for this test.
-contract_role = "service_provider_or_contractor"
+# # 3. Identify the vendor's role.
+# # This is a manually supplied assumption for this test.
+# contract_role = "service_provider_or_contractor"
 
-# 4. Compare the clauses with the legal requirements.
-report = review_contract(
-    clauses,
-    contract_role
-)
+# # 4. Compare the clauses with the legal requirements.
+# report = review_contract(
+#     clauses,
+#     contract_role
+# )
 
-# 5. Display the preliminary review.
-print_compliance_report(report)
+# # 5. Display the preliminary review.
+# print_compliance_report(report)
