@@ -14,6 +14,8 @@ def read_txt(path):
     with open(path, mode="r", encoding="utf-8", errors="replace") as file:
      content = file.read()
 
+    #print({content})
+
     sections = []
 
     for page_number, page_text in enumerate(
@@ -27,7 +29,8 @@ def read_txt(path):
             "location": f"Text page {page_number}",
             "text": page_text.strip()
         })
-       
+      #  print (sections[0]["source"], sections[0]["page_number"], sections[0]["location"], sections[0]["text"])
+
     return sections
 
 # Main function that reads the contract in txt format.

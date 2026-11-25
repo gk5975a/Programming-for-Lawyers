@@ -23,28 +23,123 @@ from compliance_engine import (
 contract_path = "Capstone/sample_vendor_agreement.txt"
 
 print("=" * 60)
-print("CONTRACT PRIVACY COMPLIANCE AI AGENT - DOCUMENT READER TEST")
+print("CONTRACT PRIVACY COMPLIANCE AI AGENT")
 print("=" * 60)
 
 try:
 
     # Read the contract
+    print("\nStep 1: Reading contract...")
     sections = read_contract(contract_path)
 
-    print("\nContract successfully read!")
+    print("\nContract successfully read into AI agent!")
 
    # print("Number of sections extracted:", len(sections))
 
-    print("\nCONTENT OF THE SAMPLE VENDOR SERVICE AGREEMENT EXTRACTED IS DISPLAYED AS FOLLOWS")
+    print("\nCONTENT OF CONTRACT AS EXTRACTED IS DISPLAYED AS FOLLOWS")
     print("-" * 60)
 
     for section in sections:
        # print("\nLocation:", section["location"])
-        print("Text:", section["text"])
+        #print("Text:", section["text"])
+        print( section["text"])
 
-    print("\n" + "=" * 55)
-    print("DOCUMENT READER TEST COMPLETED")
-    print("=" * 55)
+    # print("\n" + "=" * 55)
+    # print("DOCUMENT READER TEST COMPLETED")
+    # print("=" * 55)
+ #############################################################################
+    print("\n")
+    print("=" * 60)
+    print("THE AI AGENT WILL NOW EXTRACT CLAUSES RELEVANT TO PRIVACY LAW")
+    print("=" * 60)
+
+    print("\nStep 2: Identifying privacy clauses...")
+    privacy_clauses = extract_privacy_clauses(sections)
+    
+    #print("\nContract successfully analyzed.")
+    
+    print(
+            " Number of privacy-related clauses identified in Contract:",
+            len(privacy_clauses)
+        )
+    
+    print("\n SUMMARY OF IDENTIFIED INFORMAITON PRIVACY-RELATED CLAUSES IN THE CONTRACT")
+    print("-" * 60)
+    
+    for clause in privacy_clauses:
+    
+            print("\nClause number :", clause["clause_number"])
+            print("Heading:", clause["heading"])
+    
+            print(
+                "Categories:",
+                ", ".join(clause["categories"])
+            )
+    
+            print(
+                "Location in Contract:",
+                clause["source_location"]
+            )
+    
+            print("Exact contract wording of clause:")
+            print(clause["text"])
+    
+            print("-" * 60)
+    
+           # print("\nCLAUSE IDENTIFICATION TEST COMPLETED")
+   ####################################################################### 
+    #print("=" * 65)
+    print("AI AGENT WILL NOW CONNECT TO OLLAMA AND PASS PRIVACY-RELATED CLAUSES TO IT")
+    print("=" * 65)
+
+    # STEP 3: Analyze clauses using Ollama.
+    print("\nStep 3: Analyzing clauses using Ollama...")
+    print ("\n")      
+    analyses = analyze_privacy_clauses(privacy_clauses)
+    print("\n" + "=" * 65)
+    print("AI PRIVACY ANALYSIS RESULTS")
+    print("=" * 65)
+    
+    for result in analyses:
+    
+            print("\nClause:", result["clause_number"])
+            print("Heading:", result["heading"])
+    
+            print("\nOriginal contract wording:")
+            print(result["original_text"])
+    
+            print("\nAI explanation:")
+            print(result["clause_summary"])
+    
+            print("\nPotential risks:")
+    
+            if result["potential_risks"]:
+    
+                for risk in result["potential_risks"]:
+    
+                    print("-", risk["risk"])
+                    print("  Reason:", risk["reason"])
+                    print("  Severity:", risk["severity"])
+    
+            else:
+                print("No potential risks identified.")
+    
+            print("\nMissing or unclear information:")
+    
+            for item in result["missing_or_unclear_information"]:
+                print("-", item)
+    
+            print("\nQuestions for lawyer:")
+    
+            for question in result["questions_for_lawyer"]:
+                print("-", question)
+    
+            print("\nPreliminary observation:")
+            print(result["preliminary_observation"])
+    
+            print("-" * 65)
+    
+    print("\nAI ANALYSIS TEST COMPLETED")
 
 except Exception as error:
 
@@ -54,131 +149,132 @@ except Exception as error:
 # Read the sample agreement.
 #contract_path = "contracts/sample_vendor_agreement.txt"
 
-print("=" * 60)
-print("CONTRACT PRIVACY AI AGENT - CLAUSE IDENTIFICATION TEST")
-print("=" * 60)
+# print("=" * 60)
+# print("CONTRACT PRIVACY AI AGENT - CLAUSE IDENTIFICATION TEST")
+# print("=" * 60)
 
-try:
+# try:
 
-    # First, extract the contract text.
-    contract_sections = read_contract(contract_path)
+#     # First, extract the contract text.
+#     contract_sections = read_contract(contract_path)
 
-    # Next, identify privacy-related clauses.
-    privacy_clauses = extract_privacy_clauses(contract_sections)
+#     # Next, identify privacy-related clauses.
+#     privacy_clauses = extract_privacy_clauses(contract_sections)
 
-    print("\nContract successfully analyzed.")
+#     print("\nContract successfully analyzed.")
 
-    print(
-        "Privacy-related clauses identified:",
-        len(privacy_clauses)
-    )
+#     print(
+#         "Privacy-related clauses identified:",
+#         len(privacy_clauses)
+#     )
 
-    print("\nIDENTIFIED PRIVACY CLAUSES")
-    print("-" * 60)
+#     print("\nIDENTIFIED PRIVACY CLAUSES")
+#     print("-" * 60)
 
-    for clause in privacy_clauses:
+#     for clause in privacy_clauses:
 
-        print("\nClause:", clause["clause_number"])
-        print("Heading:", clause["heading"])
+#         print("\nClause:", clause["clause_number"])
+#         print("Heading:", clause["heading"])
 
-        print(
-            "Categories:",
-            ", ".join(clause["categories"])
-        )
+#         print(
+#             "Categories:",
+#             ", ".join(clause["categories"])
+#         )
 
-        print(
-            "Source:",
-            clause["source_location"]
-        )
+#         print(
+#             "Source:",
+#             clause["source_location"]
+#         )
 
-        print("Contract wording:")
-        print(clause["text"])
+#         print("Contract wording:")
+#         print(clause["text"])
 
-        print("-" * 60)
+#         print("-" * 60)
 
-    print("\nCLAUSE IDENTIFICATION TEST COMPLETED")
+#     print("\nCLAUSE IDENTIFICATION TEST COMPLETED")
 
-except Exception as error:
+# except Exception as error:
 
-    print("\nERROR:", error)
+#     print("\nERROR:", error)
 
+######################
+#########################
+# print("=" * 65)
+# print("CONTRACT PRIVACY AI AGENT - AI ANALYSIS TEST")
+# print("=" * 65)
 
+#try:
 
-print("=" * 65)
-print("CONTRACT PRIVACY AI AGENT - AI ANALYSIS TEST")
-print("=" * 65)
+    # # STEP 1: Read the contract.
+    # print("\nStep 1: Reading contract...")
 
-try:
+    # sections = read_contract(contract_path)
 
-    # STEP 1: Read the contract.
-    print("\nStep 1: Reading contract...")
+    # print("Contract successfully read.")
 
-    sections = read_contract(contract_path)
+    # # STEP 2: Identify privacy clauses.
+    # print("\nStep 2: Identifying privacy clauses...")
 
-    print("Contract successfully read.")
+    # clauses = extract_privacy_clauses(sections)
 
-    # STEP 2: Identify privacy clauses.
-    print("\nStep 2: Identifying privacy clauses...")
+    # print("Privacy clauses identified:", len(clauses))
 
-    clauses = extract_privacy_clauses(sections)
+    # # STEP 3: Analyze clauses using Ollama.
+    # print("\nStep 3: Analyzing clauses using Ollama...")
 
-    print("Privacy clauses identified:", len(clauses))
-
-    # STEP 3: Analyze clauses using Ollama.
-    print("\nStep 3: Analyzing clauses using Ollama...")
-
-    analyses = analyze_privacy_clauses(clauses)
-
+   # analyses = analyze_privacy_clauses(clauses)
+##################
+###################
     # STEP 4: Display the AI findings.
-    print("\n" + "=" * 65)
-    print("AI PRIVACY ANALYSIS RESULTS")
-    print("=" * 65)
+#     print("\n" + "=" * 65)
+#     print("AI PRIVACY ANALYSIS RESULTS")
+#     print("=" * 65)
 
-    for result in analyses:
+#     for result in analyses:
 
-        print("\nClause:", result["clause_number"])
-        print("Heading:", result["heading"])
+#         print("\nClause:", result["clause_number"])
+#         print("Heading:", result["heading"])
 
-        print("\nOriginal contract wording:")
-        print(result["original_text"])
+#         print("\nOriginal contract wording:")
+#         print(result["original_text"])
 
-        print("\nAI explanation:")
-        print(result["clause_summary"])
+#         print("\nAI explanation:")
+#         print(result["clause_summary"])
 
-        print("\nPotential risks:")
+#         print("\nPotential risks:")
 
-        if result["potential_risks"]:
+#         if result["potential_risks"]:
 
-            for risk in result["potential_risks"]:
+#             for risk in result["potential_risks"]:
 
-                print("-", risk["risk"])
-                print("  Reason:", risk["reason"])
-                print("  Severity:", risk["severity"])
+#                 print("-", risk["risk"])
+#                 print("  Reason:", risk["reason"])
+#                 print("  Severity:", risk["severity"])
 
-        else:
-            print("No potential risks identified.")
+#         else:
+#             print("No potential risks identified.")
 
-        print("\nMissing or unclear information:")
+#         print("\nMissing or unclear information:")
 
-        for item in result["missing_or_unclear_information"]:
-            print("-", item)
+#         for item in result["missing_or_unclear_information"]:
+#             print("-", item)
 
-        print("\nQuestions for lawyer:")
+#         print("\nQuestions for lawyer:")
 
-        for question in result["questions_for_lawyer"]:
-            print("-", question)
+#         for question in result["questions_for_lawyer"]:
+#             print("-", question)
 
-        print("\nPreliminary observation:")
-        print(result["preliminary_observation"])
+#         print("\nPreliminary observation:")
+#         print(result["preliminary_observation"])
 
-        print("-" * 65)
+#         print("-" * 65)
 
-    print("\nAI ANALYSIS TEST COMPLETED")
+#     print("\nAI ANALYSIS TEST COMPLETED")
 
-except Exception as error:
+# except Exception as error:
 
-    print("\nERROR DURING ANALYSIS:")
-    print(type(error).__name__, "-", error)
+#     print("\nERROR DURING ANALYSIS:")
+#     print(type(error).__name__, "-", error)
 
 print("=" * 60)
 print("CALIFORNIA PRIVACY LAW DATABASE TEST")
