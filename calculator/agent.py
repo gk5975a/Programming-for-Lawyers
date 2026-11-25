@@ -55,7 +55,7 @@ list_files_schema = {
 
 def agent(messages):
     tools = [
-        tool_schema, list_files_schema
+        tool_schema, list_files_schema,read_file_tool_schema
     ]
 
     payload = {
@@ -78,7 +78,7 @@ def agent(messages):
 tool_called = True
 messages = [
     {"role": "user", 
-     "content": "list all files in Deposition"
+     "content": "what is CCPA or CPRA?"
      }
 
 ]

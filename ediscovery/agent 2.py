@@ -7,7 +7,7 @@ HEADERS = {"Authorization": "Bearer " + os.environ["OLLAMA_API_KEY"]}
 
 def agent(messages):
     payload = {
-        "model": "gpt-oss:120b",
+        "model": "deepseek-v4.1-flash",
         "messages": messages,
         "stream": False,
     }

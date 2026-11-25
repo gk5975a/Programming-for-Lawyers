@@ -49,48 +49,50 @@ try:
     # print("=" * 55)
  #############################################################################
     print("\n")
-    print("=" * 60)
+    print("=" * 64)
     print("THE AI AGENT WILL NOW EXTRACT CLAUSES RELEVANT TO PRIVACY LAW")
-    print("=" * 60)
+    print("=" * 64)
 
     print("\nStep 2: Identifying privacy clauses...")
     privacy_clauses = extract_privacy_clauses(sections)
     
     #print("\nContract successfully analyzed.")
     
-    print(
-            " Number of privacy-related clauses identified in Contract:",
+    print("\n Number of privacy-related clauses identified in Contract:",
             len(privacy_clauses)
         )
     
-    print("\n SUMMARY OF IDENTIFIED INFORMAITON PRIVACY-RELATED CLAUSES IN THE CONTRACT")
+    print("\nSUMMARY OF IDENTIFIED INFORMAITON PRIVACY-RELATED CLAUSES IN THE CONTRACT")
     print("-" * 60)
     
     for clause in privacy_clauses:
     
             print("\nClause number :", clause["clause_number"])
-            print("Heading:", clause["heading"])
+            print("\nHeading:", clause["heading"])
     
             print(
-                "Categories:",
+                "\nCategories:",
                 ", ".join(clause["categories"])
             )
     
             print(
-                "Location in Contract:",
+                "\nLocation in Contract:",
                 clause["source_location"]
             )
     
-            print("Exact contract wording of clause:")
+            print("\nExact contract wording of clause:")
+            print("\n")
             print(clause["text"])
     
-            print("-" * 60)
+            print("-" * 80)
     
            # print("\nCLAUSE IDENTIFICATION TEST COMPLETED")
    ####################################################################### 
-    #print("=" * 65)
-    print("AI AGENT WILL NOW CONNECT TO OLLAMA AND PASS PRIVACY-RELATED CLAUSES TO IT")
-    print("=" * 65)
+    #print("=" * 80)
+    print("\n")
+    print("=" * 90)
+    print("AI AGENT WILL NOW CONNECT TO OLLAMA AND PASS PRIVACY-RELATED CLAUSES TO IT FOR ANALYSIS")
+    print("=" * 90)
 
     # STEP 3: Analyze clauses using Ollama.
     print("\nStep 3: Analyzing clauses using Ollama...")
@@ -145,7 +147,8 @@ except Exception as error:
 
   print("\nERROR:", error)
 
-
+  print ("\nCheck your internet connectivity and run the program again. Ollama is having issues connecting and rendering responses")
+  print("\n")
 # Read the sample agreement.
 #contract_path = "contracts/sample_vendor_agreement.txt"
 

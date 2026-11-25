@@ -34,7 +34,7 @@ def agent(messages):
 
 
     payload = {
-            "model": "gpt-oss:120b",
+            "model": "deepseek-v4.1-flash",
             "messages": messages,
             "stream": False,
         }
