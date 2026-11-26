@@ -160,7 +160,7 @@ The Business may provide the Vendor with customer names,
 email addresses, telephone numbers and account information
 for purposes of providing the contracted services.
 
-AI explanation:The clause allows the Business to give the Vendor customer names, email addresses, phone numbers, and account information so the Vendor can provide the contracted services.
+AI explanation:The clause permits the Business to share customers' names, email addresses, telephone numbers, and account information with the Vendor so that the Vendor can perform the contracted services.
 
 Clause:4
 
@@ -171,7 +171,7 @@ Original contract wording:4. USE OF PERSONAL INFORMATION
 The Vendor may use personal information to perform the
 services described in this Agreement.
 
-AI explanation:The clause permits the Vendor to use any personal information solely for the purpose of performing the services described in the agreement.
+AI explanation:The clause permits the vendor to use any personal information that the business provides solely for the purpose of performing the services described in the agreement.
 
 Clause:5
 
@@ -182,7 +182,7 @@ Original contract wording:5. DATA RETENTION
 The Vendor may retain customer information for as long
 as reasonably necessary for its business operations.
 
-AI explanation:The clause states that the Vendor may keep customer personal information for as long as it is reasonably necessary for its business operations.
+AI explanation:The clause permits the vendor to keep customer personal information for an indefinite period, stating it may be retained "as long as reasonably necessary for its business operations" without specifying any time limits or deletion obligations.
 
 Clause:6
 
@@ -194,7 +194,7 @@ The Vendor shall maintain reasonable administrative,
 technical and physical safeguards to protect customer
 information.
 
-AI explanation:The clause requires the Vendor to maintain "reasonable administrative, technical and physical safeguards" to protect customer information.
+AI explanation:The clause requires the Vendor to maintain reasonable administrative, technical, and physical safeguards to protect the customer's information.
 
 Clause:7
 
@@ -205,7 +205,7 @@ Original contract wording:7. SUBCONTRACTORS
 The Vendor may engage subcontractors to assist with
 providing the services.
 
-AI explanation:The clause permits the Vendor to use subcontractors to help provide the contracted services, but does not specify any conditions, safeguards, or obligations related to the handling of personal information by those subcontractors.
+AI explanation:The clause permits the Vendor to use subcontractors to help deliver the contracted services, without specifying any limits, safeguards, or obligations related to personal information.
 
 Clause:8
 
@@ -216,4 +216,4 @@ Original contract wording:8. TERMINATION
 Upon termination, the parties shall discuss the handling
 of customer information.
 
-AI explanation:The clause states that when the agreement ends, the parties will discuss how to handle customer information.
+AI explanation:The clause says that when the agreement ends, the parties will talk about how to handle customer information.

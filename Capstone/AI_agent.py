@@ -21,7 +21,7 @@ from privacy_analyzer import analyze_privacy_clauses
 
 # Location of our sample contract
 contract_path = "Capstone/sample_vendor_agreement.txt"
-analyzed_contract = "analyzed_contract.txt"
+analyzed_contract = "Capstone/ANALYZED_CONTRACT.txt"
 with open(analyzed_contract, "w", encoding="utf-8") as f:
  print("=" * 60)
  print("CONTRACT PRIVACY COMPLIANCE AI AGENT")
