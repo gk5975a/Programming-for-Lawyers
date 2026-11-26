@@ -1,0 +1,136 @@
+
+CONTRACT PRIVACY COMPLIANCE AI AGENT
+
+Step 1: Reading contract...
+Contract successfully read into AI agent!
+CONTENT OF CONTRACT AS EXTRACTED IS DISPLAYED AS FOLLOWS------------------------------------------------------------SAMPLE VENDOR SERVICES AGREEMENT
+
+1. PARTIES
+
+This Agreement is entered into between ABC Company ("Business")
+and XYZ Technologies ("Vendor").
+
+
+2. SERVICES
+
+The Vendor shall provide cloud-based customer management
+services to the Business.
+
+3. PERSONAL INFORMATION
+
+The Business may provide the Vendor with customer names,
+email addresses, telephone numbers and account information
+for purposes of providing the contracted services.
+
+4. USE OF PERSONAL INFORMATION
+
+The Vendor may use personal information to perform the
+services described in this Agreement.
+
+5. DATA RETENTION
+
+The Vendor may retain customer information for as long
+as reasonably necessary for its business operations.
+
+6. INFORMATION SECURITY
+
+The Vendor shall maintain reasonable administrative,
+technical and physical safeguards to protect customer
+information.
+
+7. SUBCONTRACTORS
+
+The Vendor may engage subcontractors to assist with
+providing the services.
+
+8. TERMINATION
+
+Upon termination, the parties shall discuss the handling
+of customer information.
+================================================================THE AI AGENT WILL NOW EXTRACT CLAUSES RELEVANT TO PRIVACY LAW================================================================
+Step 2: Identifying privacy clauses...
+SUMMARY OF IDENTIFIED INFORMAITON PRIVACY-RELATED CLAUSES IN THE CONTRACT------------------------------------------------------------
+Clause number: 3
+
+Heading: PERSONAL INFORMATION
+
+Categories: Personal information
+
+Location in Contract: T, e, x, t,  , p, a, g, e,  , 1
+
+Exact contract wording of clause:
+3. PERSONAL INFORMATION
+
+The Business may provide the Vendor with customer names,
+email addresses, telephone numbers and account information
+for purposes of providing the contracted services.--------------------------------------------------------------------------------
+Clause number: 4
+
+Heading: USE OF PERSONAL INFORMATION
+
+Categories: Personal information, Use restrictions
+
+Location in Contract: T, e, x, t,  , p, a, g, e,  , 1
+
+Exact contract wording of clause:
+4. USE OF PERSONAL INFORMATION
+
+The Vendor may use personal information to perform the
+services described in this Agreement.--------------------------------------------------------------------------------
+Clause number: 5
+
+Heading: DATA RETENTION
+
+Categories: Personal information, Data retention and deletion
+
+Location in Contract: T, e, x, t,  , p, a, g, e,  , 1
+
+Exact contract wording of clause:
+5. DATA RETENTION
+
+The Vendor may retain customer information for as long
+as reasonably necessary for its business operations.--------------------------------------------------------------------------------
+Clause number: 6
+
+Heading: INFORMATION SECURITY
+
+Categories: Information security
+
+Location in Contract: T, e, x, t,  , p, a, g, e,  , 1
+
+Exact contract wording of clause:
+6. INFORMATION SECURITY
+
+The Vendor shall maintain reasonable administrative,
+technical and physical safeguards to protect customer
+information.--------------------------------------------------------------------------------
+Clause number: 7
+
+Heading: SUBCONTRACTORS
+
+Categories: Subcontractors
+
+Location in Contract: T, e, x, t,  , p, a, g, e,  , 1
+
+Exact contract wording of clause:
+7. SUBCONTRACTORS
+
+The Vendor may engage subcontractors to assist with
+providing the services.--------------------------------------------------------------------------------
+Clause number: 8
+
+Heading: TERMINATION
+
+Categories: Personal information, Data retention and deletion
+
+Location in Contract: T, e, x, t,  , p, a, g, e,  , 1
+
+Exact contract wording of clause:
+8. TERMINATION
+
+Upon termination, the parties shall discuss the handling
+of customer information.--------------------------------------------------------------------------------
+==========================================================================================AI AGENT WILL NOW CONNECT TO OLLAMA AND PASS PRIVACY-RELATED CLAUSES TO IT FOR ANALYSIS
+
+==========================================================================================
+Step 3: Analyzing clauses using Ollama...
