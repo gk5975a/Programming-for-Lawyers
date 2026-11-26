@@ -118,8 +118,8 @@ def analyze_clause(clause):
     ]
 
     payload = {
-     #  "model":"gpt-oss:120b",
-       "model":"deepseek-v4.1-flash",
+     "model":"gpt-oss:120b",
+       #"model":"deepseek-v4.1-flash",
       # "model": "gpt-oss:20b",
         "messages": messages,
         "stream": False,

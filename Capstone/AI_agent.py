@@ -22,50 +22,53 @@ from privacy_analyzer import analyze_privacy_clauses
 # Location of our sample contract
 contract_path = "Capstone/sample_vendor_agreement.txt"
 analyzed_contract = "analyzed_contract.txt"
+with open(analyzed_contract, "w", encoding="utf-8") as f:
+ print("=" * 60)
+ print("CONTRACT PRIVACY COMPLIANCE AI AGENT")
+ print("=" * 60)
 
-#with open(analyzed_contract, "w", encoding="utf-8") as f:
-print("=" * 60)
-print("CONTRACT PRIVACY COMPLIANCE AI AGENT")
-print("=" * 60)
-
- #f.write("\nCONTRACT PRIVACY COMPLIANCE AI AGENT\n")
- # f.write()
+ f.write("\nCONTRACT PRIVACY COMPLIANCE AI AGENT\n")
+ f.write("=" * 60)
 try:
-# with open(analyzed_contract, "a", encoding="utf-8") as f:
+ with open(analyzed_contract, "a", encoding="utf-8") as f:
     # Read the contract
-    print("\nStep 1: Reading contract...\n\n")
-    #f.write("\nStep 1: Reading contract...")
+    print("\nStep 1: Reading contract...")
+
+    f.write("\nStep 1: Reading contract...")
+
     sections = read_contract(contract_path)
 
     print("\nContract successfully read into AI agent!\n\n")
-    #f.write("\nContract successfully read into AI agent!")
+
+    f.write("\nContract successfully read into AI agent!\n")
    # print("Number of sections extracted:", len(sections))
 
-    print("\nCONTENT OF CONTRACT AS EXTRACTED IS DISPLAYED AS FOLLOWS\n\n")
-    print("-" * 60)
-   # f.write("\nCONTENT OF CONTRACT AS EXTRACTED IS DISPLAYED AS FOLLOWS")
-    #f.write("-" * 60)
-
+    print("\nCONTENT OF CONTRACT AS EXTRACTED IS DISPLAYED AS FOLLOWS\n")
+    print("=" * 60)
+    f.write("\nCONTENT OF CONTRACT AS EXTRACTED IS DISPLAYED AS FOLLOWS\n")
+    f.write("=" * 60)
+    f.write("\n")
     for section in sections:
        # print("\nLocation:", section["location"])
         #print("Text:", section["text"])
         print( section["text"])
-       # f.write(section["text"])
+        f.write(section["text"]) 
+        f.write("\n")
     # print("\n" + "=" * 55)
     # print("DOCUMENT READER TEST COMPLETED")
     # print("=" * 55)
  #############################################################################
     print("\n")
-   # f.write("\n")
+    f.write("\n")
     print("=" * 64)
-    #f.write("=" * 64)
+    f.write("=" * 64)
     print("THE AI AGENT WILL NOW EXTRACT CLAUSES RELEVANT TO PRIVACY LAW")
-    #f.write("THE AI AGENT WILL NOW EXTRACT CLAUSES RELEVANT TO PRIVACY LAW")
+    f.write("\nTHE AI AGENT WILL NOW EXTRACT CLAUSES RELEVANT TO PRIVACY LAW\n")
     print("=" * 64)
-    #f.write("=" * 64)
+    f.write("=" * 64)
 
     print("\nStep 2: Identifying privacy clauses...")
-   # f.write("\nStep 2: Identifying privacy clauses...")
+    f.write("\nStep 2: Identifying privacy clauses...\n")
 
     privacy_clauses = extract_privacy_clauses(sections)
     
@@ -74,83 +77,99 @@ try:
     print("\n Number of privacy-related clauses identified in Contract:",
             len(privacy_clauses)
         )
-    #f.write("\n Number of privacy-related clauses identified in Contract:", len(privacy_clauses) )
-    
+   # f.write(f"\n Number of privacy-related clauses identified in Contract:{len['privacy_clauses']}\n" )
+    f.write("\n Number of privacy-related clauses identified in Contract:{len['privacy_clauses']}\n" )
+        
     print("\nSUMMARY OF IDENTIFIED INFORMAITON PRIVACY-RELATED CLAUSES IN THE CONTRACT")
-   # f.write("\nSUMMARY OF IDENTIFIED INFORMAITON PRIVACY-RELATED CLAUSES IN THE CONTRACT")
+    f.write("\nSUMMARY OF IDENTIFIED INFORMAITON PRIVACY RELATED CLAUSES IN THE CONTRACT\n")
     print("-" * 60)
-   # f.write("-" * 60)
+    f.write("-" * 60)
     
     for clause in privacy_clauses:
     
             print("\nClause number :", clause["clause_number"])
-           # f.write("\nClause number :", clause["clause_number"])
-           # f.write(f"\nClause number: {clause['clause_number']}\n")
+            #f.write("\nClause number :", clause["clause_number"])
+            f.write(f"\nClause number: {clause['clause_number']}\n")
             print("\nHeading:", clause["heading"])
            # f.write("\nHeading:", clause["heading"])
-           # f.write(f"\nHeading: {clause['heading']}\n")
+            f.write(f"\nHeading: {clause['heading']}\n")
     
             print(
                 "\nCategories:",
                 ", ".join(clause["categories"])
             )
-           # f.write(f"\nCategories: {', '.join(clause['categories'])}\n")
+            f.write(f"\nCategories: {', '.join(clause['categories'])}\n")
     
             print(
                 "\nLocation in Contract:",
                 clause["source_location"]
             )
-            #f.write(f"\nLocation in Contract: {', '.join(clause['source_location'])}\n")
+            f.write(f"\nLocation in Contract: {', '.join(clause['source_location'])}\n")
     
             print("\nExact contract wording of clause:")
-            #f.write("\nExact contract wording of clause:")
+            print(clause["text"])
+            f.write(f"\nExact contract wording of clause:{clause ['text']}\n")
             print("\n")
            # f.write("\n")
-            print(clause["text"])
+            #print(clause["text"])
            # f.write(clause["text"])
             
             print("-" * 80)
-            #f.write("-" * 80)
-    
+            f.write("-" * 80)
+            
            # print("\nCLAUSE IDENTIFICATION TEST COMPLETED")
    ####################################################################### 
     #print("=" * 80)
     print("\n")
-   # f.write("\n")
     print("=" * 90)
-   # f.write("=" * 90)
     print("AI AGENT WILL NOW CONNECT TO OLLAMA AND PASS PRIVACY-RELATED CLAUSES TO IT FOR ANALYSIS")
     print("=" * 90)
-  
+
+    f.write("\n\n")
+    f.write("=" * 90)
+    f.write("\n AI AGENT WILL NOW CONNECT TO OLLAMA AND PASS PRIVACY-RELATED CLAUSES TO IT FOR ANALYSIS\n")
+    f.write("=" * 90)
+    f.write("\n")
+
     # STEP 3: Analyze clauses using Ollama.
     print("\nStep 3: Analyzing clauses using Ollama...")
     print ("\n") 
-   
+
+    f.write("\nStep 3: Analyzing clauses using Ollama...")
+    f.write("\n")
+
     analyses = analyze_privacy_clauses(privacy_clauses)
+
     print("\n" + "=" * 60)
-   
     print("OLLAMA RETURN ANALYSIS RESULTS TO AI AGENT.")
-   
     print("=" * 60)
-    
+
+    f.write("\n" + "=" * 60)
+    f.write("\nOLLAMA RETURN ANALYSIS RESULTS TO AI AGENT.")
+    f.write("\n" + "=" * 60)
+
     for result in analyses:
        
             print("\nClause:", result["clause_number"])
-          
+            f.write(f"\nClause:{result["clause_number"]}\n")
+
             print("Heading:", result["heading"])
-          
+            f.write(f"\nHeading:{result["heading"]}\n")
+
             print("\nOriginal contract wording:")
-          
             print(result["original_text"])
-          
+            f.write(f"\nOriginal contract wording:{result["original_text"]}\n")
+
             print("\nAI explanation:")
-          
             print(result["clause_summary"])
-          
+            f.write(f"\nAI explanation:{result["clause_summary"]}\n")
+
             print("\nPotential risks:")
           
             if result["potential_risks"]:
-    
+
+               # f.write(f"\nPotential risks:{result["potential_risks"]}\n")
+
                 for risk in result["potential_risks"]:
     
                     print("-", risk["risk"])
